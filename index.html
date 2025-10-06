@@ -9,155 +9,68 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap">
 </head>
 <body>
-    <div id="particles-js"></div>
-    
-    <div class="container">
-        <div class="form-box">
-            <h2>Fernando Mejia, Website Under Construction
-            </h2>
-            
-            <form>
-                <div class="input-group">
-                    <input type="text" id="username" required class="input-field">
-                    <label for="username">Username</label>
-                    <div class="glow-line"></div>
-                </div>
-                
-                <div class="input-group">
-                    <input type="password" id="password" required class="input-field">
-                    <label for="password">Password</label>
-                    <div class="glow-line"></div>
-                </div>
-                
-                <div class="remember-forgot">
-                    <div class="remember">
-                        <input type="checkbox" id="remember">
-                        <label for="remember">Remember me</label>
-                    </div>
-                    <a href="#" class="forgot">Forgot Password?</a>
-                </div>
-                
-                <button type="submit" class="login-btn">
-                    <span>LinkedIn</span>
-                    <div class="btn-glow"></div>
-                </button>
-                
-                <div class="signup-link">
-                    Don't have an account? <a href="#">Register</a>
-                </div>
-            </form>
-        </div>
-    </div>
+  <div id="particles-js"></div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            particlesJS('particles-js', {
-                "particles": {
-                    "number": {
-                        "value": 100,
-                        "density": {
-                            "enable": true,
-                            "value_area": 800
-                        }
-                    },
-                    "color": {
-                        "value": "#ffd700"
-                    },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": {
-                            "width": 0,
-                            "color": "#000000"
-                        },
-                        "polygon": {
-                            "nb_sides": 5
-                        }
-                    },
-                    "opacity": {
-                        "value": 0.8,
-                        "random": true,
-                        "anim": {
-                            "enable": true,
-                            "speed": 1,
-                            "opacity_min": 0.4,
-                            "sync": false
-                        }
-                    },
-                    "size": {
-                        "value": 5,
-                        "random": true,
-                        "anim": {
-                            "enable": true,
-                            "speed": 2,
-                            "size_min": 1,
-                            "sync": false
-                        }
-                    },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#ffd700",
-                        "opacity": 0.6,
-                        "width": 1.5
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 2,
-                        "direction": "none",
-                        "random": true,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false,
-                        "attract": {
-                            "enable": true,
-                            "rotateX": 600,
-                            "rotateY": 1200
-                        }
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "repulse"
-                        },
-                        "onclick": {
-                            "enable": true,
-                            "mode": "push"
-                        },
-                        "resize": true
-                    },
-                    "modes": {
-                        "grab": {
-                            "distance": 400,
-                            "line_linked": {
-                                "opacity": 1
-                            }
-                        },
-                        "bubble": {
-                            "distance": 400,
-                            "size": 40,
-                            "duration": 2,
-                            "opacity": 8,
-                            "speed": 3
-                        },
-                        "repulse": {
-                            "distance": 100,
-                            "duration": 0.4
-                        },
-                        "push": {
-                            "particles_nb": 4
-                        },
-                        "remove": {
-                            "particles_nb": 2
-                        }
-                    }
-                },
-                "retina_detect": true
-            });
-        });
-    </script>
+  <div class="container">
+    <div class="form-box">
+      <h2>Fernando Mejia</h2>
+      <p class="tagline">Aspiring Software Engineer | Web Developer</p>
+
+      <div class="about-section">
+        <p>
+          Welcome to my personal website! I'm passionate about building projects
+          that blend creativity and logic. This space is currently under construction,
+          but feel free to connect with me below.
+        </p>
+      </div>
+
+      <div class="links">
+        <a href="https://www.linkedin.com/in/fernandoemejia/" target="_blank" class="link-btn">
+          LinkedIn
+        </a>
+        <a href="https://github.com/feesmeji" target="_blank" class="link-btn">
+          GitHub
+        </a>
+        <a href="#" class="link-btn">
+          Resume
+        </a>
+      </div>
+
+      <p class="construction-note">🚧 Website Under Construction 🚧</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      particlesJS('particles-js', {
+        "particles": {
+          "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
+          "color": { "value": "#ffd700" },
+          "shape": { "type": "circle" },
+          "opacity": {
+            "value": 0.8, "random": true,
+            "anim": { "enable": true, "speed": 1, "opacity_min": 0.4 }
+          },
+          "size": {
+            "value": 5, "random": true,
+            "anim": { "enable": true, "speed": 2, "size_min": 1 }
+          },
+          "line_linked": {
+            "enable": true, "distance": 150,
+            "color": "#ffd700", "opacity": 0.6, "width": 1.5
+          },
+          "move": {
+            "enable": true, "speed": 2, "direction": "none",
+            "random": true, "straight": false, "out_mode": "out"
+          }
+        },
+        "interactivity": {
+          "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } },
+          "modes": { "repulse": { "distance": 100, "duration": 0.4 }, "push": { "particles_nb": 4 } }
+        },
+        "retina_detect": true
+      });
+    });
+  </script>
 </body>
-</html>
