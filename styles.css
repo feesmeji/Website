@@ -93,16 +93,53 @@ p {
     letter-spacing: 1px;
 }
 
-.social-links img{
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s, filter 0.3s;
-    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.6));   
+/* Social Links Styling */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* space between icons */
+  margin: 2rem 0;
 }
 
-.social-links img:hover {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 15px rgba(255, 215, 0, 1));
+/* Layout and stacking */
+.social-icon {
+  display: flex;
+  flex-direction: column; /* stack icon and label vertically */
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Icon mods */
+.social-icon i {
+  font-size: 3.5rem; /* bigger icons */
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* For icon glowing */
+.social-icon:hover i {
+  color: #f7ff00; /* neon yellow */
+  text-shadow: 
+    0 0 1px #f7ff00,
+    0 0 2px #f7ff00,
+    0 0 4px #f7ff00;
+  transform: scale(1); /* subtle pop */
+}
+
+/* For icon labels */
+.social-icon:hover .icon-label {
+  color: #f7ff00; /* neon yellow */
+  text-shadow: 
+    0 0 1px #f7ff00,
+    0 0 2px #f7ff00,
+    0 0 4px #f7ff00;
+}
+
+.icon-label{
+  margin-top: 0.3rem; /* space between icon and text */
+  font-size: 0.9rem;
+  color: #fff;
+  transition: all 0.3s ease-in-out; /* smooth animation */
 }
 
 .glow-line {
