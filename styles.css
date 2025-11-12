@@ -61,6 +61,20 @@ body {
   }
 }
 
+/*Rule for H1 heading "Welcome */
+
+h1 {
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'Gill Sans Extrabold', serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    animation: glow 2s infinite alternate;
+    font-size: 20px;
+}
+
 h2 {
     color: #ffd700;
     text-align: center;
