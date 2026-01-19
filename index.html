@@ -38,6 +38,22 @@
             <i class="fas fa-file-alt"></i>
             <span class="icon-label">Resume</span>
         </a>
+        <a href="#" class="social-icon" id="briefcase-icon">
+            <i class="fas fa-briefcase"></i>
+            <span class="icon-label">Technical Writing Projects</span>
+        </a>
+ 
+        <!-- Modal container -->
+        <div id="doc-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Technical Writing Projects</h2>
+            <a href="The Current State of Video Game AI Research Paper -  CSE185S March 2024.pdf" target="_blank">The Current State of Video Game AI Research Paper -  CSE185S March 2024</a>
+            <a href="LaTeX Tutorial Technical Document - CSE185S February 2024.pdf" target="_blank">LaTeX Tutorial Technical Document - CSE185S February 2024</a>
+            <a href="Technical Poster Presentation on Video Game AI - CSE185S March 2024.pdf" target="_blank">Technical Poster Presentation on Video Game AI - CSE185S March 2024</a>
+        </div>
+        </div>
+
         </div>
       <p class="construction-note">🚧 Website Under Construction 🚧</p>
     </div>
@@ -76,5 +92,26 @@
       });
     });
   </script>
+
+    <script>
+    const modal = document.getElementById('doc-modal');
+    const btn = document.getElementById('briefcase-icon');
+    const span = document.querySelector('.modal .close');
+
+    btn.onclick = function(e) {
+        e.preventDefault(); // prevent jump
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+        modal.style.display = "none";
+        }
+    }
+    </script>
 </body>
 </html>
