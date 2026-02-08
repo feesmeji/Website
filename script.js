@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const btn = document.getElementById('briefcase-icon');
   const span = document.querySelector('.modal .close');
 
-  btn.addEventListener('click', function (e) {
-    e.preventDefault();
+  btn.addEventListener('click', function (ev) {
+    ev.preventDefault();
     modal.style.display = "block";
   });
 
