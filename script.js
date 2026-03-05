@@ -44,20 +44,23 @@ document.addEventListener('DOMContentLoaded', function () {
     retina_detect: true
   });
 
-  // ---------- Modal logic ----------
+  // ---------- Briefcase Modal logic ----------
   const modal = document.getElementById('doc-modal');
   const btn = document.getElementById('briefcase-icon');
   const span = document.querySelector('.modal .close');
-
+  
+  //CLicking the briefcase button opens the modal
   btn.addEventListener('click', function (ev) {
     ev.preventDefault();
     modal.style.display = "block";
   });
-
+  
+  // Clicking the X closes the modal
   span.addEventListener('click', function () {
     modal.style.display = "none";
   });
 
+  //Clicking outside the documents modal menu closes the box
   window.addEventListener('click', function (event) {
     if (event.target === modal) {
       modal.style.display = "none";
