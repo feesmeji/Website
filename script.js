@@ -44,26 +44,28 @@ document.addEventListener('DOMContentLoaded', function () {
     retina_detect: true
   });
 
-  // ---------- Briefcase Modal logic ----------
-  const modal = document.getElementById('doc-modal');
-  const btn = document.getElementById('briefcase-icon');
-  const span = document.querySelector('.modal .close');
-  
-  //CLicking the briefcase button opens the modal
-  btn.addEventListener('click', function (ev) {
-    ev.preventDefault();
-    modal.style.display = "block";
-  });
-  
-  // Clicking the X closes the modal
-  span.addEventListener('click', function () {
-    modal.style.display = "none";
-  });
+  // ---------- Project modals (technical writing + programming) ----------
+  function setupModal(modalId, triggerId) {
+    const modal = document.getElementById(modalId);
+    const trigger = document.getElementById(triggerId);
+    const closeBtn = modal.querySelector('.close');
 
-  //Clicking outside the documents modal menu closes the box
-  window.addEventListener('click', function (event) {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  });
+    trigger.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      modal.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', function () {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function (event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  }
+
+  setupModal('doc-modal', 'briefcase-icon');
+  setupModal('code-projects-modal', 'code-projects-icon');
 });

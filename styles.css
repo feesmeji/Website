@@ -156,6 +156,7 @@ p {
 /* Social Links Styling */
 .social-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem; /* space between icons */
   margin: 2rem 0;
