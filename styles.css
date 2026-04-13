@@ -37,9 +37,9 @@ body {
     border-radius: 20px;
     padding: 60px 50px;
     box-shadow:
-        0 0 80px rgba(212, 175, 55, 0.3),
-        inset 0 0 20px rgba(212, 175, 55, 0.2);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+        0 0 80px rgba(255, 255, 255, 0.35),
+        inset 0 0 20px rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     opacity: 0;
     transform: rotateX(20deg) translateY(100px);
     animation: formEntrance 1.5s ease forwards;
@@ -234,29 +234,29 @@ p {
 .form-box:hover {
     transform: rotateY(2deg) translateY(-10px) scale(1.03);
     box-shadow:
-        0 0 80px rgba(212, 175, 55, 0.6), /* outer gold glow stronger */
-        inset 0 0 40px rgba(212, 175, 55, 0.4); /* inner glow brighter */
-    border: 1px solid rgba(255, 215, 100, 0.7); /* more vibrant gold border */
+        0 0 80px rgba(255, 255, 255, 0.65), /* outer white glow stronger */
+        inset 0 0 40px rgba(255, 255, 255, 0.45); /* inner white glow brighter */
+    border: 1px solid rgba(255, 255, 255, 0.8); /* brighter white border */
     animation: formEntrance 1.5s ease forwards, pulseGlow 4s ease-in-out infinite;
 }
 
 @keyframes pulseGlow {
     0% {
         box-shadow:
-            0 0 40px rgba(212, 175, 55, 0.3),
-            inset 0 0 15px rgba(212, 175, 55, 0.2);
-        border-color: rgba(212, 175, 55, 0.3);
+            0 0 40px rgba(255, 255, 255, 0.35),
+            inset 0 0 15px rgba(255, 255, 255, 0.25);
+        border-color: rgba(255, 255, 255, 0.35);
     }
     50% {
         box-shadow:
-            0 0 90px rgba(212, 175, 55, 0.6),
-            inset 0 0 40px rgba(212, 175, 55, 0.4);
-        border-color: rgba(255, 215, 100, 0.7);
+            0 0 90px rgba(255, 255, 255, 0.7),
+            inset 0 0 40px rgba(255, 255, 255, 0.45);
+        border-color: rgba(255, 255, 255, 0.85);
     }
     100% {
         box-shadow:
-            0 0 40px rgba(212, 175, 55, 0.3),
-            inset 0 0 15px rgba(212, 175, 55, 0.2);
-        border-color: rgba(212, 175, 55, 0.3);
+            0 0 40px rgba(255, 255, 255, 0.35),
+            inset 0 0 15px rgba(255, 255, 255, 0.25);
+        border-color: rgba(255, 255, 255, 0.35);
     }
 }
