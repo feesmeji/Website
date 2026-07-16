@@ -156,9 +156,9 @@ p {
 /* Social Links Styling */
 .social-links {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* keep all buttons on one line */
   justify-content: center;
-  gap: 2rem; /* space between icons */
+  gap: 1.5rem; /* space between icons */
   margin: 2rem 0;
 }
 
@@ -168,6 +168,8 @@ p {
   flex-direction: column; /* stack icon and label vertically */
   align-items: center;
   text-decoration: none;
+  flex: 1 1 0; /* share the row evenly so nothing overflows */
+  min-width: 0;
 }
 
 /* Icon mods */
@@ -177,29 +179,37 @@ p {
   transition: all 0.3s ease-in-out;
 }
 
-/* For icon glowing */
+.social-image {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+/* For icon glowing: icon stays white with a yellow glow behind it, like the WTM button */
 .social-icon:hover i {
-  color: #f7ff00; /* neon yellow */
-  text-shadow: 
-    0 0 1px #f7ff00,
-    0 0 2px #f7ff00,
-    0 0 4px #f7ff00;
-  transform: scale(1); /* subtle pop */
+  color: #fff; /* keep the icon white */
+  text-shadow: 0 0 10px #f7ff00; /* single soft glow, same as the WTM button */
+  transform: scale(1.05); /* subtle pop */
+}
+
+.social-icon:hover .social-image {
+  box-shadow: 0 0 10px #f7ff00;
+  transform: scale(1.05);
 }
 
 /* For icon labels */
 .social-icon:hover .icon-label {
-  color: #f7ff00; /* neon yellow */
-  text-shadow: 
-    0 0 1px #f7ff00,
-    0 0 2px #f7ff00,
-    0 0 4px #f7ff00;
+  color: #fff; /* keep the label white */
+  text-shadow: 0 0 10px #f7ff00; /* single soft glow, same as the WTM button */
 }
 
 .icon-label{
   margin-top: 0.3rem; /* space between icon and text */
   font-size: 0.9rem;
   color: #fff;
+  text-align: center; /* long labels wrap onto centered lines */
   transition: all 0.3s ease-in-out; /* smooth animation */
 }
 
@@ -227,6 +237,23 @@ p {
     
     .form-box {
         padding: 25px 20px;
+    }
+
+    .social-links {
+        gap: 0.75rem;
+    }
+
+    .social-icon i {
+        font-size: 2.2rem;
+    }
+
+    .social-image {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .icon-label {
+        font-size: 0.7rem;
     }
 }
 
@@ -259,4 +286,66 @@ p {
             inset 0 0 15px rgba(255, 255, 255, 0.25);
         border-color: rgba(255, 255, 255, 0.35);
     }
+}
+
+/* WTM feature page */
+body.wtm-page {
+  display: block;
+  min-height: 100vh;
+  overflow: auto;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.wtm-showcase {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.25);
+}
+
+.wtm-showcase h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+.wtm-screenshot {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  margin: 25px auto;
+  border-radius: 28px;
+  box-shadow: 0 0 30px rgba(65, 255, 0, 0.25);
+}
+
+.wtm-copy {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.wtm-app-link,
+.wtm-back-link {
+  display: inline-block;
+  padding: 12px 20px;
+  color: #000;
+  background: #41ff00;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.wtm-back-link {
+  margin-top: 18px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 480px) {
+  .wtm-showcase {
+    padding: 28px 18px;
+  }
 }
