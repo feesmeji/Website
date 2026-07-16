@@ -24,7 +24,7 @@ body {
 
 .container {  /* Box that is in the middle of the website*/
     width: 100%;
-    max-width: 900px;
+    max-width: 1150px;
     padding: 40px;
     position: relative;
     z-index: 10;
@@ -137,10 +137,18 @@ h2 {
     font-size: 20px;
 }
 
+/* Soft static white glow behind the text */
+.glow-text {
+    color: #fff;
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.9),
+        0 0 18px rgba(255, 255, 255, 0.7);
+}
+
 .about-section {
     font-size: 18px;
     line-height: 1.6;
-    max-width: 700px;
+    max-width: 950px;
     margin: 0 auto 30px;
 }
 
